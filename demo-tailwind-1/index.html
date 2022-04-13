@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link href="./dist/css/output.css" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <!-- navigation bar -->
+            <nav
+                class="absolute right-0 left-0 z-10 text-white capitalize text-lg w-9/12 mx-auto py-5 flex justify-between items-center"
+            >
+                <a href="#" class="">Tail listing</a>
+                <a
+                    href="#"
+                    class="py-3 px-6 border rounded-md border-amber-500"
+                >
+                    add listing</a
+                >
+                <div class="space-x-4">
+                    <a href="#" class="">sign in</a>
+                    <a href="#" class="">sign up</a>
+                </div>
+            </nav>
+
+            <!-- hero  -->
+            <div class="relative h-screen">
+                <img
+                    src="src/assets/images/hero/hero_4.jpg"
+                    alt=""
+                    class="h-screen w-screen object-cover"
+                />
+                <div
+                    class="after:content-[''] absolute bg-black/50 inset-0"
+                ></div>
+                <div
+                    class="absolute inset-0 h-full w-full flex flex-col justify-center items-center text-white"
+                >
+                    <h1 class="capitalize text-4xl mb-4 font-bold">
+                        discover places that prople love
+                    </h1>
+                    <p class="first-letter:uppercase mb-4">
+                        we will help you to find the best places in the world
+                    </p>
+
+                    <div class="space-x-4 mb-4">
+                        <input
+                            type="text"
+                            class="rounded-md w-80 bg-white text-gray-600 py-3 px-4 focus:outline-none"
+                            placeholder="Location"
+                        />
+                        <input
+                            type="text"
+                            class="rounded-md w-80 bg-white text-gray-600 py-3 px-4 focus:outline-none"
+                            placeholder="I'm Looking for..."
+                        />
+                        <a
+                            href="#"
+                            class="capitalize text-lg bg-amber-500 py-3 px-6 text-white hover:bg-amber-600 rounded-md"
+                        >
+                            search
+                        </a>
+                    </div>
+                    <div class="space-x-4">
+                        <a href="#" class="inline-flex">
+                            <span class="material-icons mr-2"> restaurant </span
+                            >restaurant
+                        </a>
+                        <a href="#" class="inline-flex">
+                            <span class="material-icons mr-2"> restaurant </span
+                            >restaurant
+                        </a>
+                        <a href="#" class="inline-flex">
+                            <span class="material-icons mr-2"> restaurant </span
+                            >restaurant
+                        </a>
+                        <a href="#" class="inline-flex">
+                            <span class="material-icons mr-2"> restaurant </span
+                            >restaurant
+                        </a>
+                        <a href="#" class="inline-flex">
+                            <span class="material-icons mr-2"> restaurant </span
+                            >restaurant
+                        </a>
+                        <a href="#" class="inline-flex">
+                            <span class="material-icons mr-2"> restaurant </span
+                            >restaurant
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="bg-gray-50 py-32">
+                <div class="w-9/12 mx-auto">
+                    <div class="max-w-xl capitalize text-center mx-auto mb-12">
+                        <h2 class="text-4xl font-medium mb-4">
+                            popular places
+                        </h2>
+                        <p>discover most searched places</p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 mx-auto">
+                        <div
+                            class="bg-white rounded-md shadow max-w-xl overflow-hidden"
+                        >
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    src="src/assets/images/skynews-dentist-generic_5393494.jpg"
+                                    alt=""
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="py-4 px-6">
+                                <div class="mb-3 flex items-center">
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="ml-4">294 Reviews</span>
+                                </div>
+                                <p class="mb-3 text-lg font-bold text-gray-600">
+                                    Dr.Someone Clinic
+                                </p>
+                                <p
+                                    class="flex items-start mb-3 text-sm text-gray-600"
+                                >
+                                    <span class="material-icons mr-3">
+                                        location_on
+                                    </span>
+                                    somewhere, american
+                                </p>
+                                <div class="space-x-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end item -->
+                        <div
+                            class="bg-white rounded-md shadow max-w-xl overflow-hidden"
+                        >
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    src="src/assets/images/247885282_428899745318874_4537354239597400518_n.jpg"
+                                    alt=""
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="py-4 px-6">
+                                <div class="mb-3 flex items-center">
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="ml-4">294 Reviews</span>
+                                </div>
+                                <p class="mb-3 text-lg font-bold text-gray-600">
+                                    Dr.Someone Clinic
+                                </p>
+                                <p
+                                    class="flex items-start mb-3 text-sm text-gray-600"
+                                >
+                                    <span class="material-icons mr-3">
+                                        location_on
+                                    </span>
+                                    somewhere, american
+                                </p>
+                                <div class="space-x-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-md shadow max-w-xl overflow-hidden"
+                        >
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    src="src/assets/images/248803100_2982714285376888_215754295389385771_n.jpg"
+                                    alt=""
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="py-4 px-6">
+                                <div class="mb-3 flex items-center">
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="ml-4">294 Reviews</span>
+                                </div>
+                                <p class="mb-3 text-lg font-bold text-gray-600">
+                                    Dr.Someone Clinic
+                                </p>
+                                <p
+                                    class="flex items-start mb-3 text-sm text-gray-600"
+                                >
+                                    <span class="material-icons mr-3">
+                                        location_on
+                                    </span>
+                                    somewhere, american
+                                </p>
+                                <div class="space-x-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-md shadow max-w-xl overflow-hidden"
+                        >
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    src="src/assets/images/20210221-KXCoffeeGym29.jpg"
+                                    alt=""
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="py-4 px-6">
+                                <div class="mb-3 flex items-center">
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="ml-4">294 Reviews</span>
+                                </div>
+                                <p class="mb-3 text-lg font-bold text-gray-600">
+                                    Dr.Someone Clinic
+                                </p>
+                                <p
+                                    class="flex items-start mb-3 text-sm text-gray-600"
+                                >
+                                    <span class="material-icons mr-3">
+                                        location_on
+                                    </span>
+                                    somewhere, american
+                                </p>
+                                <div class="space-x-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-md shadow max-w-xl overflow-hidden"
+                        >
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    src="src/assets/images/81782419-mobile-phone-repair-at-service-center-smartphone-dissasembling-and-diagnostic-repairman-workplace-to.jpg"
+                                    alt=""
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="py-4 px-6">
+                                <div class="mb-3 flex items-center">
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="ml-4">294 Reviews</span>
+                                </div>
+                                <p class="mb-3 text-lg font-bold text-gray-600">
+                                    Dr.Someone Clinic
+                                </p>
+                                <p
+                                    class="flex items-start mb-3 text-sm text-gray-600"
+                                >
+                                    <span class="material-icons mr-3">
+                                        location_on
+                                    </span>
+                                    somewhere, american
+                                </p>
+                                <div class="space-x-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-md shadow max-w-xl overflow-hidden"
+                        >
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    src="src/assets/images/dental 1.jpg"
+                                    alt=""
+                                    class="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div class="py-4 px-6">
+                                <div class="mb-3 flex items-center">
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="material-icons text-amber-200">
+                                        grade
+                                    </span>
+                                    <span class="ml-4">294 Reviews</span>
+                                </div>
+                                <p class="mb-3 text-lg font-bold text-gray-600">
+                                    Dr.Someone Clinic
+                                </p>
+                                <p
+                                    class="flex items-start mb-3 text-sm text-gray-600"
+                                >
+                                    <span class="material-icons mr-3">
+                                        location_on
+                                    </span>
+                                    somewhere, american
+                                </p>
+                                <div class="space-x-3">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                    <span
+                                        class="text-xs px-2 py-1 bg-amber-100 border rounded-full border-amber-200 text-amber-700"
+                                        >hospital</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end -->
+                    </div>
+                    <div class="mt-8 text-center">
+                        <a
+                            href="#"
+                            class="inline-block capitalize rounded-md py-3 px-6 bg-white border border-gray-100 text-lg shadow hover:shadow-lg text-gray-600"
+                        >
+                            discover more
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- discover search -->
+
+            <div class="bg-sky-200 py-32">
+                <div class="w-9/12 mx-auto">
+                    <div class="max-w-xl capitalize text-center mx-auto mb-12">
+                        <h2 class="text-4xl font-medium mb-4">
+                            discover by categories
+                        </h2>
+                        <p>discover places by categorys</p>
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-y-6 gap-x-10 mx-auto">
+                        <a
+                            class="bg-white py-8 text-center rounded-md shadow shadow-slate-400 max-w-xl"
+                        >
+                            <img
+                                src="src/assets/images/icons/531911_camera_device_entertainment_film_media_icon.png"
+                                alt=""
+                                class="mx-auto mb-8"
+                            />
+                            <p class="capitalize font-thin text-lg">
+                                coffee & tea
+                            </p>
+                        </a>
+                        <a
+                            class="bg-white py-8 text-center rounded-md shadow shadow-slate-400 max-w-xl"
+                        >
+                            <img
+                                src="src/assets/images/icons/531911_camera_device_entertainment_film_media_icon.png"
+                                alt=""
+                                class="mx-auto mb-8"
+                            />
+                            <p class="capitalize font-thin text-lg">
+                                coffee & tea
+                            </p>
+                        </a>
+                        <a
+                            class="bg-white py-8 text-center rounded-md shadow shadow-slate-400 max-w-xl"
+                        >
+                            <img
+                                src="src/assets/images/icons/531911_camera_device_entertainment_film_media_icon.png"
+                                alt=""
+                                class="mx-auto mb-8"
+                            />
+                            <p class="capitalize font-thin text-lg">
+                                coffee & tea
+                            </p>
+                        </a>
+                        <a
+                            class="bg-white py-8 text-center rounded-md shadow shadow-slate-400 max-w-xl"
+                        >
+                            <img
+                                src="src/assets/images/icons/531911_camera_device_entertainment_film_media_icon.png"
+                                alt=""
+                                class="mx-auto mb-8"
+                            />
+                            <p class="capitalize font-thin text-lg">
+                                coffee & tea
+                            </p>
+                        </a>
+                        <a
+                            class="bg-white py-8 text-center rounded-md shadow shadow-slate-400 max-w-xl"
+                        >
+                            <img
+                                src="src/assets/images/icons/531911_camera_device_entertainment_film_media_icon.png"
+                                alt=""
+                                class="mx-auto mb-8"
+                            />
+                            <p class="capitalize font-thin text-lg">
+                                coffee & tea
+                            </p>
+                        </a>
+                        <a
+                            class="bg-white py-8 text-center rounded-md shadow shadow-slate-400 max-w-xl"
+                        >
+                            <img
+                                src="src/assets/images/icons/531911_camera_device_entertainment_film_media_icon.png"
+                                alt=""
+                                class="mx-auto mb-8"
+                            />
+                            <p class="capitalize font-thin text-lg">
+                                coffee & tea
+                            </p>
+                        </a>
+                        <a
+                            class="bg-white py-8 text-center rounded-md shadow shadow-slate-400 max-w-xl"
+                        >
+                            <img
+                                src="src/assets/images/icons/531911_camera_device_entertainment_film_media_icon.png"
+                                alt=""
+                                class="mx-auto mb-8"
+                            />
+                            <p class="capitalize font-thin text-lg">
+                                coffee & tea
+                            </p>
+                        </a>
+                        <a
+                            class="bg-white py-8 text-center rounded-md shadow shadow-slate-400 max-w-xl"
+                        >
+                            <img
+                                src="src/assets/images/icons/531911_camera_device_entertainment_film_media_icon.png"
+                                alt=""
+                                class="mx-auto mb-8"
+                            />
+                            <p class="capitalize font-thin text-lg">
+                                coffee & tea
+                            </p>
+                        </a>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <a
+                            href="#"
+                            class="inline-block capitalize rounded-md py-3 px-6 bg-white border border-gray-100 text-lg shadow hover:shadow-lg text-gray-600"
+                        >
+                            discover more
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- end collection -->
+
+            
+
+        </main>
+    </body>
+</html>

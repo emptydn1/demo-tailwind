@@ -1,0 +1,76 @@
+@tailwind base;
+
+@layer base {
+    html {
+        font-size: 112.5%;
+        scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-weight: 700;
+        line-height: 70px;
+        color: #272d4e;
+    }
+
+    h1 {
+        font-size: 4.722rem;
+        line-height: 95px;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #94a2b3;
+    }
+}
+
+@tailwind components;
+@layer components {
+    .btn {
+        @apply inline-block text-white font-medium rounded-60 leading-5;
+    }
+    .btn-1 {
+        @apply bg-blue  p-pd1;
+    }
+    .btn-2 {
+        @apply bg-green  p-pd2;
+    }
+    .btn-3 {
+        @apply bg-transparent p-pd3;
+    }
+}
+
+@tailwind utilities;
+
+@layer components {
+    .container-2 {
+        max-width: 1495px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .clip-path-tem {
+        /* clip-path: path(''); */
+        clip-path: polygon(
+            0 19%,
+            0 0,
+            45% 11%,
+            53% 11%,
+            100% 0,
+            100% 15%,
+            100% 51%,
+            100% 100%,
+            54% 93%,
+            46% 93%,
+            0 100%,
+            0 29%
+        );
+    }
+}

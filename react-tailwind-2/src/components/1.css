@@ -1,0 +1,18 @@
+.swiper-button-next {
+    right: 9%;
+    top: 40%;
+    width: 120px;
+    height: 120px;
+    border-radius: 99999px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 25px 75px rgba(6, 7, 20, 0.1);
+    backdrop-filter: blur(7px);
+    color: #060714;
+}
+.swiper-button-prev {
+    display: none;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 1rem;
+}

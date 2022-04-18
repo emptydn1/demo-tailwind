@@ -1,0 +1,110 @@
+@tailwind base;
+@layer base {
+    html {
+        font-size: 100%;
+        @apply not-italic leading-[1.25] tracking-[0.2px];
+    }
+    body {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1 {
+        @apply not-italic font-semibold text-[7.5rem] leading-[1] text-dark1;
+    }
+    h4 {
+        @apply not-italic font-semibold  text-[2.25rem] text-dark1 leading-[1.25];
+    }
+    h5 {
+        @apply not-italic font-semibold  text-[2rem] text-dark1 leading-[1.25];
+    }
+    h6 {
+        @apply not-italic font-semibold text-[1.25rem] text-dark1 leading-[1.25];
+    }
+    p {
+        @apply font-inter not-italic font-normal text-[0.875rem] text-dark3;
+    }
+}
+
+@tailwind components;
+@layer components {
+    .btn {
+        @apply not-italic font-semibold leading-[1.5] rounded-[12px] cursor-pointer;
+        padding: 16px 24px;
+        border-radius: 12px;
+        box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.1),
+            inset 4px 4px 4px rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+
+    .dark-blue-btn-1 {
+        border: none;
+        background: linear-gradient(104.42deg, #4745d0 0%, #2a27c9 60.23%);
+    }
+    .dark-blue-btn-2 {
+        border: none;
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+            ),
+            linear-gradient(104.42deg, #4745d0 0%, #2a27c9 60.23%);
+    }
+    .light-blue-btn-1 {
+        border: none;
+        background: linear-gradient(
+                104.42deg,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0) 60.23%
+            ),
+            linear-gradient(104.42deg, #4745d0 0%, #2a27c9 60.23%);
+    }
+    .light-blue-btn-2 {
+        border: none;
+        background: linear-gradient(
+            104.42deg,
+            rgba(71, 69, 208, 0.25) 0%,
+            rgba(42, 39, 201, 0.25) 60.23%
+        );
+    }
+
+    .light-btn-1 {
+        border: 2px solid #7780a1;
+        color: #7780a1;
+    }
+    .light-btn-2 {
+        border: 2px solid #060714;
+        color: #060714;
+    }
+    .light-btn-3 {
+        border: 2px solid #060714;
+        color: #060714;
+    }
+    .light-btn-4 {
+        opacity: 0.5;
+        border: 2px solid #7780a1;
+        color: #7780a1;
+    }
+    .heading-small-1 {
+        @apply text-center text-[0.938rem] font-medium uppercase tracking-[0.188rem];
+    }
+    .heading-small-2 {
+        @apply text-left text-[0.938rem] font-medium uppercase tracking-[0.188rem] text-[#BBC0D0];
+    }
+}
+
+@tailwind utilities;
+@layer utilities {
+    .bg-header {
+        background-image: url("./../public/assets/img/bg-header.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 100px;
+        min-height: 664px;
+        width: 1851px;
+        background-position: left top;
+    }
+    .flex-between-center {
+        @apply flex justify-between items-center;
+    }
+}

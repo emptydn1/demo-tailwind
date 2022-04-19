@@ -1,0 +1,92 @@
+export const data = [
+    {
+        image: "/assets/img/auctions/1.png",
+        heart: true,
+        name: "Tristique diam a, enim, eros tellus. Viverra etiam",
+        x: true,
+    },
+    {
+        image: "/assets/img/auctions/2.png",
+        heart: true,
+        name: "Vulputate felis purus viverra morbi facilisi eget",
+        x: true,
+    },
+    {
+        image: "/assets/img/auctions/3.png",
+        heart: false,
+        name: "Dui accumsan leo vestibulum ornare eu",
+        x: true,
+    },
+    {
+        image: "/assets/img/auctions/4.png",
+        heart: false,
+        name: "Senectus adipiscing nascetur accumsan etiam",
+        x: true,
+    },
+    {
+        image: "/assets/img/auctions/5.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: true,
+    },
+    {
+        image: "/assets/img/sale/image.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+    {
+        image: "/assets/img/popular/1.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+    {
+        image: "/assets/img/popular/2.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+    {
+        image: "/assets/img/popular/3.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+    {
+        image: "/assets/img/popular/4.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+    {
+        image: "/assets/img/popular/5.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+    {
+        image: "/assets/img/popular/6.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+    {
+        image: "/assets/img/popular/1.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+    {
+        image: "/assets/img/popular/1.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+    {
+        image: "/assets/img/popular/1.png",
+        heart: false,
+        name: "Mattis at diam lorem nisl nam sed sociis",
+        x: false,
+    },
+];

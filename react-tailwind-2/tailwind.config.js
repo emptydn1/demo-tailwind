@@ -29,7 +29,10 @@ module.exports = {
                 pink: "#EA6CBC",
                 red: "#FB4539",
             },
-            // backgroundImage: {},
+            backgroundImage: {
+                joinNow:
+                    "linear-gradient(266deg, rgba(242,243,246,0.7931547619047619) 16%, rgba(244,190,248,0) 99%)",
+            },
             // backgroundColor: {},
             // padding: {},
             // borderRadius: {},

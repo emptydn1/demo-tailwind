@@ -107,4 +107,14 @@
     .flex-between-center {
         @apply flex justify-between items-center;
     }
+    .truncate {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: initial;
+        overflow: hidden;
+    }
+    .active {
+        border: 2px solid #000;
+    }
 }

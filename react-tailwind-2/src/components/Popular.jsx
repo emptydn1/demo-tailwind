@@ -31,7 +31,7 @@ const Popular = () => {
                     Music
                 </a>
             </div>
-            <div className="flex-between-center mb-[4.5rem]">
+            <div className="flex-between-center !justify-evenly md:!justify-between flex-wrap lg:flex-nowrap mb-[4.5rem]">
                 {data.length &&
                     data
                         .filter((e) => e.x === false)
@@ -49,7 +49,10 @@ const Popular = () => {
                         })}
             </div>
             <div className="text-center">
-                <a href="/#" className="btn light-btn-2 inline-block">
+                <a
+                    href="/#"
+                    className="btn light-btn-1 text-center shadow-none"
+                >
                     Show me more
                 </a>
             </div>

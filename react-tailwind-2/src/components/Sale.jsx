@@ -11,8 +11,8 @@ import "./1.css";
 const Sale = () => {
     return (
         <Layouts xx="mb-[9.375rem]">
-            <div className="flex gap-[1.5rem]">
-                <div className="sale overflow-hidden w-1/3 py-[2.8125rem] pl-[2.5rem] bg-white rounded-[1.25rem] border border-solid border-[#E2E2ED]">
+            <div className="hidden md:flex gap-[1.5rem]">
+                <div className="sale overflow-hidden w-1/3 py-[2.8125rem] pl-[2.5rem] bg-white dark:bg-inherit rounded-[1.25rem] border border-solid border-[#E2E2ED] dark:border-dark2">
                     <h5 className="max-w-[19.625rem] mb-[3.5rem]">
                         Check out the hottest Sale offers
                     </h5>
@@ -86,7 +86,7 @@ const Sale = () => {
                     </div>
                 </div>
 
-                <div className="sale overflow-hidden w-1/3 py-[2.8125rem] px-[2.5rem] bg-white rounded-[1.25rem] border border-solid border-[#E2E2ED]">
+                <div className="sale overflow-hidden w-1/3 py-[2.8125rem] px-[2.5rem] rounded-[1.25rem] border border-solid bg-white  border-[#E2E2ED] dark:bg-inherit dark:border-dark2">
                     <h5 className="max-w-[19.625rem] mb-[3.5rem]">
                         Top NFT at a lower price
                     </h5>
@@ -97,7 +97,8 @@ const Sale = () => {
                                 .map((e, i) => {
                                     if (i < 4) {
                                         return (
-                                            <div
+                                            <a
+                                                href="/#"
                                                 key={i + "h"}
                                                 className="max-w-[25rem] grid grid-cols-[120px_1fr] gap-[1rem] mb-[1rem]"
                                             >
@@ -117,14 +118,14 @@ const Sale = () => {
                                                     </h6>
                                                     <div className="flex-between-center mb-[0.75rem]">
                                                         <div className="flex-between-center ">
-                                                            <span className="material-icons mr-[0.6875rem]">
+                                                            <span className="material-icons mr-[0.6875rem] dark:text-white">
                                                                 timer
                                                             </span>
-                                                            <span className="font-inter text-[0.875rem] text-dark1 font-normal leading-[1.25]">
+                                                            <span className="font-inter text-[0.875rem] text-dark1 font-normal leading-[1.25] dark:text-white">
                                                                 2:41 min left
                                                             </span>
                                                         </div>
-                                                        <span className="bg-[rgba(42,39,201,0.1)] text-[0.8125rem] rounded-[0.25rem] py-[0.375rem] font-semibold px-[0.625rem] text-dark-blue">
+                                                        <span className="bg-[rgba(42,39,201,0.1)] dark:bg-[rgba(81,76,255,0.15)] text-[0.8125rem] rounded-[0.25rem] py-[0.375rem] font-semibold px-[0.625rem] text-dark-blue">
                                                             3.19 ETH
                                                         </span>
                                                     </div>
@@ -134,13 +135,13 @@ const Sale = () => {
                                                             bidding
                                                         </p>
                                                         <div className="flex-between-center">
-                                                            <span className="material-icons">
+                                                            <span className="material-icons dark:text-[red]">
                                                                 favorite_border
                                                             </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         );
                                     } else return "";
                                 })}

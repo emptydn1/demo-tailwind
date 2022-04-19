@@ -1,28 +1,32 @@
 @tailwind base;
 @layer base {
     html {
-        font-size: 100%;
-        @apply not-italic leading-[1.25] tracking-[0.2px];
+        font-size: 68.75%;
+        @apply not-italic leading-[1.25] tracking-[0.2px] md:text-[100%];
     }
     body {
         max-width: 1920px;
         margin-left: auto;
         margin-right: auto;
+        @apply dark:bg-dark1;
     }
     h1 {
-        @apply not-italic font-semibold text-[7.5rem] leading-[1] text-dark1;
+        @apply not-italic font-semibold text-[5rem] md:text-[7.5rem] leading-[1] text-dark1 dark:text-white;
+    }
+    h2 {
+        @apply dark:text-white;
     }
     h4 {
-        @apply not-italic font-semibold  text-[2.25rem] text-dark1 leading-[1.25];
+        @apply not-italic font-semibold  text-[2.25rem] text-dark1 leading-[1.25] dark:text-white;
     }
     h5 {
-        @apply not-italic font-semibold  text-[2rem] text-dark1 leading-[1.25];
+        @apply not-italic font-semibold  text-[2rem] text-dark1 leading-[1.25] dark:text-white;
     }
     h6 {
-        @apply not-italic font-semibold text-[1.25rem] text-dark1 leading-[1.25];
+        @apply not-italic font-semibold text-[1.25rem] text-dark1 leading-[1.25] dark:text-white;
     }
     p {
-        @apply font-inter not-italic font-normal text-[0.875rem] text-dark3;
+        @apply font-inter not-italic font-normal text-[0.875rem] text-dark3 dark:text-dark3;
     }
 }
 
@@ -30,11 +34,12 @@
 @layer components {
     .btn {
         @apply not-italic font-semibold leading-[1.5] rounded-[12px] cursor-pointer;
-        padding: 16px 24px;
+        padding: 8px 16px;
         border-radius: 12px;
         box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.1),
             inset 4px 4px 4px rgba(255, 255, 255, 0.1);
         color: #fff;
+        @apply md:py-[16px] md:px-[24px];
     }
 
     .dark-blue-btn-1 {
@@ -102,7 +107,10 @@
         bottom: 100px;
         min-height: 664px;
         width: 1851px;
+        z-index: -1;
         background-position: left top;
+        display: none;
+        @apply xl:block;
     }
     .flex-between-center {
         @apply flex justify-between items-center;
@@ -116,5 +124,6 @@
     }
     .active {
         border: 2px solid #000;
+        @apply dark:border-white;
     }
 }

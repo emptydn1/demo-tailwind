@@ -9,14 +9,18 @@ const value = [
     { x: 5.5, y: 1.5 },
     { x: 4.5, y: 0 },
 ];
-// bg-[#F2F3F6]
-const JoinNow = () => {
+
+const JoinNow = ({ isDark }) => {
     return (
         <Layouts xx="mt-[9.375rem] mb-[9.375rem]">
-            <img src="/assets/img/Pleat.png" alt="" />
-            <div className="flex overflow-hidden relative bg-[#F2F3F6] rounded-[1.25rem] rounded-tl-none pt-[5.625rem] pb-[5.5625rem] pl-[7.375rem]">
-                <div className="absolute bg-joinNow z-10 right-0 top-0 h-full w-1/2"></div>
-                <div className="w-1/2">
+            {isDark ? (
+                <img src="/assets/img/Pleat2.png" alt="" />
+            ) : (
+                <img src="/assets/img/Pleat.png" alt="" />
+            )}
+            <div className="flex overflow-hidden relative  bg-[#F2F3F6] dark:bg-darkSide dark:bg-dark1 rounded-[1.25rem] rounded-tl-none pt-[5.625rem] pb-[5.5625rem] pl-[0.9375rem] md:pl-[7.375rem]">
+                <div className="absolute bg-joinNow z-10 right-0 top-0 h-full w-1/2 dark:bg-joinNowDarkSie"></div>
+                <div className="w-full md:w-1/2">
                     <div className="max-w-[36.875rem]">
                         <p className="heading-small-2 mb-[1rem]">Overline</p>
                         <h2 className="text-[3rem] max-w-[35.3125rem] leading-[1] mb-[2rem]">
@@ -38,7 +42,7 @@ const JoinNow = () => {
                     </div>
                 </div>
 
-                <div className="relative">
+                <div className="relative hidden lg:block">
                     <img
                         src="/assets/img/join/6.png"
                         alt=""
@@ -58,19 +62,19 @@ const JoinNow = () => {
                                     />
                                 </div>
                                 <div>
-                                    <p className="block mb-[0.4063rem] font-semibold text-[1.125rem] text-dark1">
+                                    <p className="block mb-[0.4063rem] font-semibold text-[1.125rem] text-dark1 dark:text-white">
                                         @brook_sim
                                     </p>
 
                                     <div className="flex-between-center space-x-[1.5625rem]">
                                         <div className="flex-between-center space-x-[0.3125rem]">
-                                            <span className="material-icons">
+                                            <span className="material-icons dark:text-dark3">
                                                 wallpaper
                                             </span>
                                             <p>Items 206</p>
                                         </div>
                                         <div className="flex-between-center space-x-[0.3125rem]">
-                                            <span className="material-icons">
+                                            <span className="material-icons dark:text-dark3">
                                                 widgets
                                             </span>
                                             <p>Items 206</p>

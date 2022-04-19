@@ -1,15 +1,19 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ isDark }) => {
     return (
-        <header className="relative ">
+        <header className="relative px-[0.9375rem] md:p-0">
             <div className="bg-header absolute "></div>
-            <div className="py-[2.625rem] px-[3rem] flex justify-between items-center">
-                <div>
-                    <img src="/assets/img/Logo.png" alt="logo" />
+            <div className="py-[2.625rem] md:px-[3rem] flex justify-between items-center">
+                <div className="w-[12.5rem] md:w-auto">
+                    {isDark ? (
+                        <img src="/assets/img/Logo2.png" alt="logo" />
+                    ) : (
+                        <img src="/assets/img/Logo.png" alt="logo" />
+                    )}
                 </div>
                 <menu>
-                    <ul className="flex justify-between items-center space-x-[4rem] font-semibold text-dark3">
+                    <ul className="hidden lg:flex justify-between items-center space-x-[4rem] font-semibold text-dark3">
                         <li>Auctions</li>
                         <li>Roadmap</li>
                         <li>Discover</li>
@@ -21,7 +25,7 @@ const Header = () => {
                     <div className="btn dark-blue-btn-1">My account</div>
                 </div>
             </div>
-            <div className="max-w-[52.313rem] mx-auto capitalize pt-[11.375rem] pb-[13.875rem]">
+            <div className="max-w-[52.313rem] mx-auto capitalize pt-[5.625rem] pb-[6.875rem] md:pt-[11.375rem] md:pb-[13.875rem]">
                 <p className="heading-small-1 mb-[2.125rem] ">
                     Non Fungible Tokens
                 </p>
@@ -42,7 +46,7 @@ const Header = () => {
                 <p className="text-center text-[1.5rem] mb-[3.25rem]">
                     Discover, collect and sell
                 </p>
-                <div className="flex justify-between max-w-[40.188rem] mx-auto bg-white rounded-[1rem] shadow-[0_25px_75px_rgba(6,7,20,0.1)] pt-[1.813rem] pl-[2rem] pb-[1.938rem]">
+                <div className="flex justify-between max-w-[40.188rem] mx-auto bg-white rounded-[1rem] shadow-[0_25px_75px_rgba(6,7,20,0.1)] py-[0.9375rem] md:pt-[29.008px] pl-[2rem] md:pb-[31.008px]">
                     <input
                         type="text"
                         placeholder="Items, collections and creators"
@@ -57,7 +61,7 @@ const Header = () => {
                                 </span>
                             </p>
 
-                            <ul className="rounded-[0.25rem] absolute font-inter not-italic font-normal text-dark3 top-full shadow-[0_25px_75px_rgba(6,7,20,0.1)] space-y-[1rem] p-[1rem] ml-[0.063rem] mt-[0.625rem] whitespace-pre cursor-pointer">
+                            <ul className="dark:bg-white rounded-[0.25rem] absolute font-inter not-italic font-normal text-dark3 top-full shadow-[0_25px_75px_rgba(6,7,20,0.1)] space-y-[1rem] p-[1rem] ml-[0.063rem] mt-[0.625rem] whitespace-pre cursor-pointer">
                                 <li className="hover:text-green">Action</li>
                                 <li className="hover:text-green">
                                     Another action
@@ -73,7 +77,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className="max-w-[41.125rem] mx-auto flex justify-between mb-[12.5rem]">
+            <div className="flex-between-center max-w-[41.125rem] mx-auto mb-[12.5rem]">
                 <img src="/assets/img/Nike.png" alt="shoes2" />
                 <img src="/assets/img/Ritter Sport.png" alt="shoes1" />
                 <img src="/assets/img/Adidas.png" alt="shoes3" />

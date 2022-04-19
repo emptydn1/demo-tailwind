@@ -1,8 +1,8 @@
 .swiper-button-next {
-    right: 9%;
-    top: 40%;
-    width: 120px;
-    height: 120px;
+    right: 13%;
+    top: 30%;
+    width: 60px;
+    height: 60px;
     border-radius: 99999px;
     background: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 25px 75px rgba(6, 7, 20, 0.1);
@@ -30,4 +30,13 @@
 }
 .sale .swiper-slide-active ~ .swiper-slide {
     opacity: 0.4;
+}
+
+@media (min-width: 768px) {
+    .swiper-button-next {
+        right: 9%;
+        top: 40%;
+        width: 120px;
+        height: 120px;
+    }
 }

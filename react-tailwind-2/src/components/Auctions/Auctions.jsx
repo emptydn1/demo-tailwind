@@ -16,10 +16,24 @@ const Auctions = () => {
             </div>
             <Swiper
                 navigation={true}
+                slidesPerView={2}
+                spaceBetween={30}
+                breakpoints={{
+                    480: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                    976: {
+                        slidesPerView: 4,
+                        spaceBetween: 72,
+                    },
+                }}
                 modules={[Navigation]}
-                slidesPerView={4}
                 slidesPerGroup={1}
-                spaceBetween={72}
                 loop={true}
                 loopFillGroupWithBlank={true}
                 initialSlide={2}

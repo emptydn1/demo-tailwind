@@ -1,8 +1,15 @@
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
+    darkMode: "class",
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
+        screens: {
+            sm: "480px",
+            md: "768px",
+            lg: "976px",
+            xl: "1440px",
+        },
         fontFamily: {
             ...fontFamily,
             sans: ["Sora", "sans-serif"],
@@ -32,6 +39,10 @@ module.exports = {
             backgroundImage: {
                 joinNow:
                     "linear-gradient(266deg, rgba(242,243,246,0.7931547619047619) 16%, rgba(244,190,248,0) 99%)",
+                joinNowDarkSie:
+                    "linear-gradient(90deg, rgba(6,7,20,0) 0%, rgba(6,7,20,0.7343312324929971) 76%)",
+                darkSide:
+                    "linear-gradient(188.08deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 93.79%)",
             },
             // backgroundColor: {},
             // padding: {},

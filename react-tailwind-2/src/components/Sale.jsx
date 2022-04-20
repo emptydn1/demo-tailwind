@@ -31,7 +31,7 @@ const Sale = () => {
                                 .map((e, i) => {
                                     if (i < 5) {
                                         return (
-                                            <SwiperSlide key={i + "xx"}>
+                                            <SwiperSlide key={e.id}>
                                                 <AuctionItem {...e} />
                                             </SwiperSlide>
                                         );

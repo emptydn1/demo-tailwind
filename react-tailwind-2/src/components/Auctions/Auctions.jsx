@@ -5,10 +5,9 @@ import AuctionItem from "./AuctionItem";
 import "swiper/css";
 import "swiper/css/navigation";
 import "../1.css";
-
 import { data } from "../../data";
 
-const Auctions = () => {
+const Auctions = ({ onShowModal }) => {
     return (
         <div className="mb-[6.25rem]">
             <div className="max-w-[24.0625rem] mb-[6rem] mx-auto">
@@ -44,8 +43,8 @@ const Auctions = () => {
                     data
                         .filter((e) => e.x !== false)
                         .map((e, i) => (
-                            <SwiperSlide key={i + "zxczxc123"}>
-                                <AuctionItem {...e} />
+                            <SwiperSlide key={e.id}>
+                                <AuctionItem {...e} onShowModal={onShowModal} />
                             </SwiperSlide>
                         ))}
             </Swiper>

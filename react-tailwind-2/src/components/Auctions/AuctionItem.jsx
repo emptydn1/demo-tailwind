@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const AuctionItem = (props) => {
     const { image, heart, name, x = true } = props;
+    const { setTheme, setToggle } = useContext(ThemeContext);
+
+    const handlePopupForm = () => {
+        setTheme(() => props);
+        setToggle((x) => !x);
+    };
+
     return (
-        <a href="/#" className={`max-w-[25rem]`}>
+        <div className="cursor-pointer" onClick={handlePopupForm}>
             <div className={`mb-[1.5rem]`}>
                 <img src={image} alt="" className="rounded-[1rem] w-full" />
             </div>
-
             <div
                 className={`flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-start ${
                     x ? "mb-[1.5rem]" : "mb-[1rem]"
@@ -75,7 +82,7 @@ const AuctionItem = (props) => {
                     <p className={`${x ? "" : "hidden"}`}>120</p>
                 </div>
             </div>
-        </a>
+        </div>
     );
 };
 

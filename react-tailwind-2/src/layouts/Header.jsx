@@ -1,6 +1,9 @@
 import React from "react";
+import useToggle from "../hooks/useToggle";
 
 const Header = ({ isDark }) => {
+    const [toggle, setToggle] = useToggle(true);
+
     return (
         <header className="relative px-[0.9375rem] md:p-0">
             <div className="bg-header absolute "></div>
@@ -54,22 +57,26 @@ const Header = ({ isDark }) => {
                     />
                     <div className="flex justify-between items-center">
                         <div className="text-[1rem] relative">
-                            <p className="cursor-pointer border-l-[1px] pl-[1rem] border-[#7780A1] w-[10.125rem] flex justify-between items-center">
+                            <p
+                                onClick={setToggle}
+                                className="cursor-pointer border-l-[1px] pl-[1rem] border-[#7780A1] w-[10.125rem] flex justify-between items-center"
+                            >
                                 Category
                                 <span className="material-icons ">
                                     keyboard_arrow_down
                                 </span>
                             </p>
-
-                            <ul className="dark:bg-white rounded-[0.25rem] absolute font-inter not-italic font-normal text-dark3 top-full shadow-[0_25px_75px_rgba(6,7,20,0.1)] space-y-[1rem] p-[1rem] ml-[0.063rem] mt-[0.625rem] whitespace-pre cursor-pointer">
-                                <li className="hover:text-green">Action</li>
-                                <li className="hover:text-green">
-                                    Another action
-                                </li>
-                                <li className="hover:text-green">
-                                    Something else here
-                                </li>
-                            </ul>
+                            {toggle && (
+                                <ul className="dark:bg-white rounded-[0.25rem] absolute font-inter not-italic font-normal text-dark3 top-full shadow-[0_25px_75px_rgba(6,7,20,0.1)] space-y-[1rem] p-[1rem] ml-[0.063rem] mt-[0.625rem] whitespace-pre cursor-pointer">
+                                    <li className="hover:text-green">Action</li>
+                                    <li className="hover:text-green">
+                                        Another action
+                                    </li>
+                                    <li className="hover:text-green">
+                                        Something else here
+                                    </li>
+                                </ul>
+                            )}
                         </div>
                         <span className="cursor-pointer material-icons text-[2.5rem] ml-[3.125rem] mr-[1.875rem] text-dark-blue">
                             search

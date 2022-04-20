@@ -50,5 +50,5 @@ module.exports = {
             // container: {},
         },
     },
-    plugins: [],
+    plugins: [require("tailwindcss"), require("autoprefixer")],
 };

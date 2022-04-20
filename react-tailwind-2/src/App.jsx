@@ -1,3 +1,4 @@
+import { useDarkMode } from "./hooks/useDarkMode";
 import Header from "./layouts/Header";
 import Auctions from "./components/Auctions/Auctions";
 import About from "./components/About";
@@ -5,16 +6,20 @@ import Sale from "./components/Sale";
 import About2 from "./components/About2";
 import Popular from "./components/Popular";
 import JoinNow from "./components/JoinNow";
-import { useDarkMode } from "./hooks/useDarkMode";
+import ModalCard from "./components/ModalCard";
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
     const [isDark, setIsDark] = useDarkMode();
+    const { toggle, setToggle } = useContext(ThemeContext);
     return (
         <>
+            {toggle ? <ModalCard onShowModal={setToggle} /> : ""}
             <Header isDark={isDark} />
             <main>
                 <div
-                    className="fixed cursor-pointer z-50 bottom-20 right-10 sm:bottom-40 sm:right-20 inline-block py-[1.5625rem] px-[1.625rem] bg-dark1 text-white dark:bg-white  rounded-full"
+                    className="fixed cursor-pointer z-[51] bottom-20 right-10 sm:bottom-40 sm:right-20 inline-block py-[1.5625rem] px-[1.625rem] bg-dark1 text-white dark:bg-white  rounded-full"
                     onClick={(e) => setIsDark(!isDark)}
                 >
                     <span className="material-icons dark:text-dark1">

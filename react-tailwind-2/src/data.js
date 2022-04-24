@@ -36,7 +36,7 @@ export const data = [
     },
     {
         id: 1233,
-        image: "/assets/img/sale/image.png",
+        image: "/assets/img/sale/pr.png",
         heart: false,
         name: "Mattis at diam lorem nisl nam sed sociis",
         x: false,

@@ -18,9 +18,9 @@ const JoinNow = ({ isDark }) => {
             ) : (
                 <img src="/assets/img/Pleat.png" alt="" />
             )}
-            <div className="flex overflow-hidden relative  bg-[#F2F3F6] dark:bg-darkSide dark:bg-dark1 rounded-[1.25rem] rounded-tl-none pt-[5.625rem] pb-[5.5625rem] pl-[0.9375rem] md:pl-[7.375rem]">
+            <div className="flex overflow-hidden relative  bg-[#F2F3F6] dark:bg-darkSide dark:bg-dark1 rounded-[1.25rem] rounded-tl-none pt-[5.625rem] pb-[5.5625rem] pl-[0.9375rem] xl:pl-[7.375rem]">
                 <div className="absolute bg-joinNow z-10 right-0 top-0 h-full w-1/2 dark:bg-joinNowDarkSie"></div>
-                <div className="w-full md:w-1/2">
+                <div className="w-full xl:w-1/2">
                     <div className="max-w-[36.875rem]">
                         <p className="heading-small-2 mb-[1rem]">Overline</p>
                         <h2 className="text-[3rem] max-w-[35.3125rem] leading-[1] mb-[2rem]">

@@ -16,7 +16,7 @@ const AuctionItem = (props) => {
                 <img src={image} alt="" className="rounded-[1rem] w-full" />
             </div>
             <div
-                className={`flex flex-col md:flex-row gap-5 md:gap-0 justify-between items-start ${
+                className={`flex flex-col xl:flex-row gap-5 xl:gap-0 justify-between items-start ${
                     x ? "mb-[1.5rem]" : "mb-[1rem]"
                 }`}
             >
@@ -65,7 +65,7 @@ const AuctionItem = (props) => {
                     <div
                         className={`${
                             x ? "" : "!hidden"
-                        } hidden md:flex justify-start space-x-[-0.625rem] mr-[1rem] `}
+                        } hidden xl:flex justify-start space-x-[-0.625rem] mr-[1rem] `}
                     >
                         <img src="/assets/img/auctions/avatar/01.png" alt="" />
                         <img src="/assets/img/auctions/avatar/02.png" alt="" />

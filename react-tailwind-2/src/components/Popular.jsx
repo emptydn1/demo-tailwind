@@ -31,8 +31,8 @@ const Popular = () => {
                     Music
                 </a>
             </div>
-            <div className="flex-between-center !justify-evenly md:!justify-between flex-wrap lg:flex-nowrap mb-[4.5rem]">
-                {data.length &&
+            <div className="flex-between-center !justify-evenly xl:!justify-between flex-wrap lg:flex-nowrap mb-[4.5rem]">
+                {data.length > 0 &&
                     data
                         .filter((e) => e.x === false)
                         .map((e, i) => {
@@ -45,7 +45,7 @@ const Popular = () => {
                                         <AuctionItem {...e} />
                                     </div>
                                 );
-                            } else return "";
+                            } else return null;
                         })}
             </div>
             <div className="text-center">

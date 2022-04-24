@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import "../1.css";
 import { data } from "../../data";
 
-const Auctions = ({ onShowModal }) => {
+const Auctions = () => {
     return (
         <div className="mb-[6.25rem]">
             <div className="max-w-[24.0625rem] mb-[6rem] mx-auto">
@@ -44,7 +44,7 @@ const Auctions = ({ onShowModal }) => {
                         .filter((e) => e.x !== false)
                         .map((e, i) => (
                             <SwiperSlide key={e.id}>
-                                <AuctionItem {...e} onShowModal={onShowModal} />
+                                <AuctionItem {...e} />
                             </SwiperSlide>
                         ))}
             </Swiper>

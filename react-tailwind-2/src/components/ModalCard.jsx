@@ -113,9 +113,9 @@ const ModalCard = ({ onShowModal }) => {
     return (
         <Modal onShowModal={onShowModal}>
             <Layouts xx="p-[1.5rem] bg-white dark:bg-dark1 border rounded-[1.25rem] border-dark3">
-                <div className="relative flex justify-evenly flex-col md:flex-row items-center gap-[5.875rem]">
+                <div className="relative flex justify-evenly flex-col xl:flex-row items-center gap-[5.875rem]">
                     <span
-                        className="material-icons absolute top-1 right-5 text-[2.5rem] dark:text-white"
+                        className="material-icons absolute top-1 right-5 text-[2.5rem] dark:text-white cursor-pointer"
                         onClick={onShowModal}
                     >
                         close
@@ -129,7 +129,7 @@ const ModalCard = ({ onShowModal }) => {
                         />
                     </div>
                     <div className="max-w-[31rem]">
-                        <div className="text-center md:text-left">
+                        <div className="text-center xl:text-left">
                             <h3 className="mb-[0.5rem] text-[2.5rem] text-dark1 dark:text-white">
                                 Dui accumsan leo vestibulum ornare
                             </h3>
@@ -139,7 +139,7 @@ const ModalCard = ({ onShowModal }) => {
                                 dolor feugiat aliquam commodo.
                             </p>
                         </div>
-                        <div className="mb-[2.75rem] py-[0.3438rem] space-x-[1.5rem] flex justify-between md:justify-start items-center">
+                        <div className="mb-[2.75rem] py-[0.3438rem] space-x-[1.5rem] flex justify-between xl:justify-start items-center">
                             <div className="space-x-[1.0625rem] flex justify-start items-center">
                                 <img
                                     src="/assets/img/join/3.png"
@@ -169,7 +169,7 @@ const ModalCard = ({ onShowModal }) => {
                         </div>
 
                         <div className=" bg-light3 rounded-[1.25rem] py-[2.5rem] px-[2rem] mb-[2.5rem]">
-                            <div className="flex justify-around md:justify-start space-x-[3.5rem] mb-[2rem]">
+                            <div className="flex justify-around xl:justify-start space-x-[3.5rem] mb-[2rem]">
                                 <div className="">
                                     <p className="mb-[0.625rem]">
                                         Current price

@@ -11,7 +11,7 @@ import "./1.css";
 const Sale = () => {
     return (
         <Layouts xx="mb-[9.375rem]">
-            <div className="hidden md:flex gap-[1.5rem]">
+            <div className="hidden xl:flex gap-[1.5rem]">
                 <div className="sale overflow-hidden w-1/3 py-[2.8125rem] pl-[2.5rem] bg-white dark:bg-inherit rounded-[1.25rem] border border-solid border-[#E2E2ED] dark:border-dark2">
                     <h5 className="max-w-[19.625rem] mb-[3.5rem]">
                         Check out the hottest Sale offers
@@ -25,7 +25,7 @@ const Sale = () => {
                         width={212}
                         className="mySwiper mb-[4rem]"
                     >
-                        {data.length &&
+                        {data.length > 0 &&
                             data
                                 .filter((e) => e.x === false)
                                 .map((e, i) => {
@@ -35,7 +35,7 @@ const Sale = () => {
                                                 <AuctionItem {...e} />
                                             </SwiperSlide>
                                         );
-                                    } else return "";
+                                    } else return null;
                                 })}
                     </Swiper>
                     <a

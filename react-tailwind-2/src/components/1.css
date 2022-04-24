@@ -32,7 +32,7 @@
     opacity: 0.4;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1366px) {
     .swiper-button-next {
         right: 9%;
         top: 40%;

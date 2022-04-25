@@ -8,7 +8,6 @@ const getPosts = async (req, res, next) => {
         res.status(404).json({ message: error.message });
         // next(error);
     }
-    res.send("ok con de");
 };
 
 const createPort = async (req, res) => {

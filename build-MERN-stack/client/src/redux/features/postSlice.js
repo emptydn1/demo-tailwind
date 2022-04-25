@@ -1,7 +1,9 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { getPostAPI } from "api";
+import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
+import { fetchPostsAPI, createPostAPI, updatePostAPI } from "api";
 
-export const getPosts = createAsyncThunk("post/getPosts", getPostAPI);
+export const getPosts = createAsyncThunk("post/getPosts", fetchPostsAPI);
+export const createPost = createAsyncThunk("post/createPost", createPostAPI);
+export const updatePost = createAsyncThunk("post/updatePost", updatePostAPI);
 
 const postSlice = createSlice({
     name: "post",
@@ -17,13 +19,22 @@ const postSlice = createSlice({
                 state.loading = true;
             })
             .addCase(getPosts.fulfilled, (state, action) => {
-                console.log({ action });
                 state.posts = action.payload;
                 state.loading = false;
             })
             .addCase(getPosts.rejected, (state, action) => {
                 state.error = action.payload;
-                console.log({ action });
+            })
+            .addCase(createPost.fulfilled, (state, action) => {
+                state.posts.push(action.payload);
+            })
+            .addCase(createPost.rejected, (state, action) => {
+                state.error = action.payload;
+            })
+            .addCase(updatePost.fulfilled, (state, action) => {
+                state.posts = current(state).posts.map((e) =>
+                    e._id === action.payload._id ? action.payload : e
+                );
             });
     },
 });

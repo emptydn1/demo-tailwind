@@ -1,0 +1,14 @@
+
+GET https://example.com/topics/1
+###
+
+POST http://localhost:5000/posts
+content-type: application/json
+
+{
+    "creator": "",
+    "message": "asd",
+    "tags": "",
+    "title": "",
+    "file":""
+}

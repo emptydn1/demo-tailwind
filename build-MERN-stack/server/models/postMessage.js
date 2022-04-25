@@ -1,24 +1,20 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
-// const chuyenthanhobjectid = require('mongodb').ObjectID;
 
-const postSchema = new Schema(
-    {
-        title: String,
-        message: String,
-        create: String,
-        tags: [String],
-        selectedFile: String,
-        likeCount: {
-            type: Number,
-            default: 0,
-        },
-        createdAt: {
-            type: Date,
-            default: new Date(),
-        },
+const postSchema = Schema({
+    title: String,
+    message: String,
+    creator: String,
+    tags: [String],
+    selectedFile: String,
+    likeCount: {
+        type: Number,
+        default: 0,
     },
-    { collection: "posts" }
-);
+    createdAt: {
+        type: Date,
+        default: new Date(),
+    },
+});
 
 module.exports = mongoose.model("PostMessage", postSchema);

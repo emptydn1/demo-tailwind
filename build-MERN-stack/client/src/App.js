@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Container, Grid } from "@mui/material";
 import Post from "components/Post";
 import Form from "components/Form";
-import { useDispatch, useSelector } from "react-redux";
+
 import { getPosts } from "redux/features/postSlice";
-import { postsSelector } from "redux/selector";
+import { postsLoadingSelector, postsSelector } from "redux/selector";
 
 const App = () => {
     const dispatch = useDispatch();
     const posts = useSelector(postsSelector);
+    const loading = useSelector(postsLoadingSelector);
+    const [idPost, setIdPost] = useState("");
 
     useEffect(() => {
         dispatch(getPosts());
@@ -24,12 +27,18 @@ const App = () => {
             <Grid container spacing={5}>
                 <Grid item xs={9}>
                     <Grid container spacing={1}>
-                        {posts &&
-                            posts.map((e, i) => <Post key={i + "1x"} {...e} />)}
+                        {loading ? (
+                            <h1>loading</h1>
+                        ) : (
+                            posts &&
+                            posts.map((e, i) => (
+                                <Post key={e._id} {...e} onSetId={setIdPost} />
+                            ))
+                        )}
                     </Grid>
                 </Grid>
                 <Grid item xs={3}>
-                    <Form />
+                    <Form idPost={idPost} onSetId={setIdPost} />
                 </Grid>
             </Grid>
         </Container>

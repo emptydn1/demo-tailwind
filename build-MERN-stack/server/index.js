@@ -1,19 +1,32 @@
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
+require("dotenv").config();
 const logger = require("morgan");
-
-const indexRouter = require("./routes/index");
-const postsRouter = require("./routes/posts");
-
+const compression = require("compression");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
-require("dotenv").config();
+const postsRouter = require("./routes/posts");
+
 const app = express();
-app.use(cors());
+app.use(compression());
+app.use(
+    cors({
+        origin: "*",
+        methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    })
+);
 
 // Mongoose connect
+
+app.use(logger("dev"));
+app.use(express.json({ limit: "30mb", extended: false }));
+app.use(express.urlencoded({ limit: "30mb", extended: false }));
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use("/posts", postsRouter);
+
 const PORT = process.env.PORT || 5000;
 mongoose
     .connect(process.env.CONNECT_URL_DATABASE, {
@@ -24,14 +37,6 @@ mongoose
         app.listen(PORT, () => console.log(`server running on port: ${PORT}`))
     )
     .catch((err) => console.log(`error database: ${err}`));
-
-app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ limit: "30mb" }));
-app.use(express.static(path.join(__dirname, "public")));
-
-app.use("/", indexRouter);
-app.use("/posts", postsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -48,5 +53,4 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render("error");
 });
-
 module.exports = app;

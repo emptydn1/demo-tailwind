@@ -1,9 +1,15 @@
 import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
-import { fetchPostsAPI, createPostAPI, updatePostAPI } from "api";
+import {
+    fetchPostsAPI,
+    createPostAPI,
+    updatePostAPI,
+    deletePostAPI,
+} from "api";
 
 export const getPosts = createAsyncThunk("post/getPosts", fetchPostsAPI);
 export const createPost = createAsyncThunk("post/createPost", createPostAPI);
 export const updatePost = createAsyncThunk("post/updatePost", updatePostAPI);
+export const deletePost = createAsyncThunk("post/deletePost", deletePostAPI);
 
 const postSlice = createSlice({
     name: "post",
@@ -34,6 +40,11 @@ const postSlice = createSlice({
             .addCase(updatePost.fulfilled, (state, action) => {
                 state.posts = current(state).posts.map((e) =>
                     e._id === action.payload._id ? action.payload : e
+                );
+            })
+            .addCase(deletePost.fulfilled, (state, action) => {
+                state.posts = current(state).posts.filter(
+                    (e) => e._id !== action.payload.temp._id
                 );
             });
     },

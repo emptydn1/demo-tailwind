@@ -10,6 +10,8 @@ import {
     Chip,
     Stack,
 } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { deletePost } from "redux/features/postSlice";
 
 const Post = (props) => {
     const {
@@ -22,10 +24,15 @@ const Post = (props) => {
         _id,
         onSetId,
     } = props;
+    const dispatch = useDispatch();
 
     const handleEdit = (e) => {
         e.preventDefault();
         onSetId(() => _id);
+    };
+
+    const handleDelete = () => {
+        dispatch(deletePost(_id));
     };
 
     return (
@@ -65,7 +72,9 @@ const Post = (props) => {
                     <Button size="small" onClick={handleEdit}>
                         Edit
                     </Button>
-                    <Button size="small">Delete</Button>
+                    <Button size="small" onClick={handleDelete}>
+                        Delete
+                    </Button>
                 </CardActions>
             </Card>
         </Grid>

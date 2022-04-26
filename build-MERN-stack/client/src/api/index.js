@@ -28,4 +28,11 @@ export const updatePostAPI = async (updatedPost) => {
 };
 
 // export const likePost = (id) => axios.patch(`${url}/${id}/likePost`);
-// export const deletePost = (id) => axios.delete(`${url}/${id}`);
+export const deletePostAPI = async (id) => {
+    console.log("xxx", id);
+    return (
+        await fetch(`${url}/${id}`, {
+            method: "delete",
+        })
+    ).json();
+};

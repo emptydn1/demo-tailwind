@@ -1,0 +1,147 @@
+@tailwind base;
+@layer base {
+    html {
+        font-size: 68.75%;
+        @apply not-italic leading-[1.25] tracking-[0.2px] md:text-[100%];
+    }
+    body {
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        @apply dark:bg-dark1;
+    }
+    h1 {
+        @apply not-italic font-semibold text-[5rem] md:text-[7.5rem] leading-[1] text-dark1 dark:text-white;
+    }
+    h2 {
+        @apply dark:text-white;
+    }
+    h4 {
+        @apply not-italic font-semibold  text-[2.25rem] text-dark1 leading-[1.25] dark:text-white;
+    }
+    h5 {
+        @apply not-italic font-semibold  text-[2rem] text-dark1 leading-[1.25] dark:text-white;
+    }
+    h6 {
+        @apply not-italic font-semibold text-[1.25rem] text-dark1 leading-[1.25] dark:text-white;
+    }
+    p {
+        @apply font-inter not-italic font-normal text-[0.875rem] text-dark3 dark:text-dark3;
+    }
+}
+
+@tailwind components;
+@layer components {
+    .btn {
+        @apply not-italic font-semibold leading-[1.5] rounded-[12px] cursor-pointer;
+        padding: 8px 16px;
+        border-radius: 12px;
+        box-shadow: inset -4px -4px 4px rgba(0, 0, 0, 0.1),
+            inset 4px 4px 4px rgba(255, 255, 255, 0.1);
+        color: #fff;
+        @apply md:py-[16px] md:px-[24px];
+    }
+
+    .dark-blue-btn-1 {
+        border: none;
+        background: linear-gradient(104.42deg, #4745d0 0%, #2a27c9 60.23%);
+    }
+    .dark-blue-btn-2 {
+        border: none;
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+            ),
+            linear-gradient(104.42deg, #4745d0 0%, #2a27c9 60.23%);
+    }
+    .light-blue-btn-1 {
+        border: none;
+        background: linear-gradient(
+                104.42deg,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0) 60.23%
+            ),
+            linear-gradient(104.42deg, #4745d0 0%, #2a27c9 60.23%);
+    }
+    .light-blue-btn-2 {
+        border: none;
+        background: linear-gradient(
+            104.42deg,
+            rgba(71, 69, 208, 0.25) 0%,
+            rgba(42, 39, 201, 0.25) 60.23%
+        );
+    }
+
+    .light-btn-1 {
+        border: 2px solid #7780a1;
+        color: #7780a1;
+    }
+    .light-btn-2 {
+        border: 2px solid #060714;
+        color: #060714;
+    }
+    .light-btn-3 {
+        border: 2px solid #060714;
+        color: #060714;
+    }
+    .light-btn-4 {
+        opacity: 0.5;
+        border: 2px solid #7780a1;
+        color: #7780a1;
+    }
+    .heading-small-1 {
+        @apply text-center text-[0.938rem] font-medium uppercase tracking-[0.188rem];
+    }
+    .heading-small-2 {
+        @apply text-left text-[0.938rem] font-medium uppercase tracking-[0.188rem] text-[#BBC0D0];
+    }
+}
+
+@tailwind utilities;
+@layer utilities {
+    .bg-header {
+        background-image: url("./../public/assets/img/bg-header.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        bottom: 100px;
+        min-height: 664px;
+        width: 1851px;
+        z-index: -1;
+        background-position: left top;
+        display: none;
+        @apply xl:block;
+    }
+    .flex-between-center {
+        @apply flex justify-between items-center;
+    }
+    .truncate {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        white-space: initial;
+        overflow: hidden;
+    }
+    .active {
+        border: 2px solid #000;
+        @apply dark:border-white;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #f5f5f5;
+    }
+
+    .scrollbar::-webkit-scrollbar {
+        width: 5px;
+        background-color: #f5f5f5;
+        height: 5px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #555;
+    }
+}
